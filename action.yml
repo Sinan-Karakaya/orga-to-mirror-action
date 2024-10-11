@@ -1,0 +1,19 @@
+name: "Mirroring organisation to monorepo"
+description: "Mirror organisation's repositories to a monorepo"
+branding:
+  icon: "archive"
+  color: "yellow"
+inputs:
+  ssh_private_key:
+    description: "SSH private key for ssh connection to the target repository"
+    required: false
+  target_monorepo_url:
+    description: "Target url"
+    required: true
+  ssh_username:
+    description: "Username for ssh connection"
+    required: false
+    default: "git"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

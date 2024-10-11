@@ -11,4 +11,4 @@ git remote add mirror "$INPUT_TARGET_MONOREPO_URL"
 git fetch --all
 git submodule update --init --recursive
 
-git push --tags --force --prune --verbose mirror
+git push --tags --force --prune --verbose mirror main
